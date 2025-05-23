@@ -34,7 +34,7 @@ Uma extensão Chrome que torna a web mais acessível através de explicações i
 
 1. **Clone ou baixe este repositório**
    ```bash
-   git clone [URL_DO_REPOSITORIO]
+   git clone https://github.com/dougdotcon/acessibilidade-multissensorial
    cd extensao-acessibilidade
    ```
 
