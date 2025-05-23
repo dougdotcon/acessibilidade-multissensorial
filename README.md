@@ -1,36 +1,70 @@
-# 🔊 Extensão de Acessibilidade Multissensorial
+<div align="center">
+  <img src="logo.png" alt="Logo da Extensão de Acessibilidade Multissensorial" width="200">
+  <h1>Extensão de Acessibilidade Multissensorial</h1>
+  
+  [![Licença: MIT](https://img.shields.io/badge/Licença-MIT-blue.svg)](LICENSE)
+  [![Chrome](https://img.shields.io/badge/Chrome-v88+-green.svg)](https://www.google.com/chrome/)
+  [![OpenAI](https://img.shields.io/badge/API-OpenAI-orange.svg)](https://platform.openai.com/api-keys)
+</div>
 
-Uma extensão Chrome que torna a web mais acessível através de explicações inteligentes, leitura em voz alta e ajustes visuais para pessoas com deficiência visual ou dificuldades de leitura.
+<p align="center">
+  Uma extensão Chrome que torna a web mais acessível através de explicações inteligentes, leitura em voz alta e ajustes visuais para pessoas com deficiência visual ou dificuldades de leitura.
+</p>
+
+<div align="center">
+  
+  [📥 Instalação](#-instalação) • 
+  [✨ Funcionalidades](#-funcionalidades) • 
+  [📖 Como Usar](#-como-usar) • 
+  [🔧 Configurações](#-configurações-técnicas) • 
+  [🤝 Contribua](#-contribuindo)
+  
+</div>
+
+---
 
 ## ✨ Funcionalidades
 
-### 🎯 Principais Recursos
-- **Explicação Inteligente**: Selecione qualquer texto e receba uma explicação clara e acessível via GPT-4o mini
-- **Leitura em Voz Alta**: Síntese de voz natural com controles de velocidade, tom e volume
-- **Ajuste de Fonte**: Aumente ou diminua o tamanho do texto dinamicamente
-- **Interface Acessível**: Navegação por teclado e suporte a leitores de tela
-
-### 🎮 Controles e Atalhos
-- **Ctrl + Alt + E**: Explicar texto selecionado
-- **Ctrl + Alt + R**: Ler texto selecionado em voz alta
-- **Ctrl + Alt + S**: Parar leitura
-- **Ctrl + Alt + +**: Aumentar fonte
-- **Ctrl + Alt + -**: Diminuir fonte
+<table>
+  <tr>
+    <td width="50%">
+      <h3>🎯 Recursos Principais</h3>
+      <ul>
+        <li><b>Explicação Inteligente</b>: Selecione qualquer texto e receba uma explicação clara via GPT-4o mini</li>
+        <li><b>Leitura em Voz Alta</b>: Síntese de voz natural com controles avançados</li>
+        <li><b>Ajuste de Fonte</b>: Aumente ou diminua o tamanho do texto dinamicamente</li>
+        <li><b>Interface Acessível</b>: Navegação por teclado e suporte a leitores de tela</li>
+      </ul>
+    </td>
+    <td width="50%">
+      <h3>🎮 Atalhos de Teclado</h3>
+      <ul>
+        <li><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>E</kbd> : Explicar texto selecionado</li>
+        <li><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>R</kbd> : Ler texto selecionado em voz alta</li>
+        <li><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>S</kbd> : Parar leitura</li>
+        <li><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>+</kbd> : Aumentar fonte</li>
+        <li><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>-</kbd> : Diminuir fonte</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 ### 🛠️ Configurações Avançadas
-- Múltiplas vozes e idiomas
-- Configurações de velocidade, tom e volume
-- Temas (claro, escuro, alto contraste)
-- Explicações automáticas
-- Leitura automática
+- 🗣️ Múltiplas vozes e idiomas
+- ⏩ Controle de velocidade, tom e volume
+- 🎨 Temas personalizáveis (claro, escuro, alto contraste)
+- 🤖 Explicações e leitura automáticas
 
 ## 🚀 Instalação
 
 ### Pré-requisitos
-1. **Google Chrome** (versão 88 ou superior)
-2. **Chave da API OpenAI** - [Obter aqui](https://platform.openai.com/api-keys)
+- **Google Chrome** (versão 88 ou superior)
+- **Chave da API OpenAI** - [Obter aqui](https://platform.openai.com/api-keys)
 
-### Passos de Instalação
+### Guia de Instalação
+
+<details>
+<summary><b>📋 Passo a passo detalhado</b></summary>
 
 1. **Clone ou baixe este repositório**
    ```bash
@@ -38,9 +72,9 @@ Uma extensão Chrome que torna a web mais acessível através de explicações i
    cd extensao-acessibilidade
    ```
 
-2. **Abra o Chrome e vá para as extensões**
+2. **Abra o Chrome e acesse as extensões**
    - Digite `chrome://extensions/` na barra de endereços
-   - Ou vá em Menu → Mais ferramentas → Extensões
+   - Ou navegue: Menu → Mais ferramentas → Extensões
 
 3. **Ative o modo desenvolvedor**
    - Clique no botão "Modo do desenvolvedor" no canto superior direito
@@ -51,89 +85,142 @@ Uma extensão Chrome que torna a web mais acessível através de explicações i
 
 5. **Configure a API OpenAI**
    - Clique no ícone da extensão
-   - Vá em "Configurações Avançadas"
+   - Acesse "Configurações Avançadas"
    - Insira sua chave da API OpenAI
    - Clique em "Testar Conexão" para verificar
 
+</details>
+
 ## 📖 Como Usar
 
-### Uso Básico
-1. **Selecione qualquer texto** em uma página web
-2. **Aparecerá uma barra de ferramentas** com opções:
-   - 📖 **Explicar**: Receba uma explicação simplificada
-   - 🔊 **Ler**: Ouça o texto em voz alta
-   - ⏹️ **Parar**: Interrompa a leitura
-   - 🔍+ **Zoom+**: Aumente a fonte
-   - 🔍- **Zoom-**: Diminua a fonte
+<table>
+  <tr>
+    <td width="60%">
+      <h3>Uso Básico</h3>
+      <ol>
+        <li><b>Selecione qualquer texto</b> em uma página web</li>
+        <li><b>Utilize a barra de ferramentas</b> que aparecerá:
+          <ul>
+            <li>📖 <b>Explicar</b>: Receba uma explicação simplificada</li>
+            <li>🔊 <b>Ler</b>: Ouça o texto em voz alta</li>
+            <li>⏹️ <b>Parar</b>: Interrompa a leitura</li>
+            <li>🔍+ <b>Zoom+</b>: Aumente a fonte</li>
+            <li>🔍- <b>Zoom-</b>: Diminua a fonte</li>
+          </ul>
+        </li>
+      </ol>
+    </td>
+    <td width="40%">
+      <h3>Usando o Popup</h3>
+      <ol>
+        <li><b>Clique no ícone da extensão</b> na barra de ferramentas</li>
+        <li><b>Acesse as ações rápidas</b>:
+          <ul>
+            <li>Explicar página inteira</li>
+            <li>Ler página inteira</li>
+            <li>Ajustar fonte da página</li>
+            <li>Parar leitura</li>
+          </ul>
+        </li>
+      </ol>
+    </td>
+  </tr>
+</table>
 
-### Usando o Popup
-1. **Clique no ícone da extensão** na barra de ferramentas
-2. **Ações rápidas disponíveis**:
-   - Explicar página inteira
-   - Ler página inteira
-   - Ajustar fonte da página
-   - Parar leitura
+### 🎨 Temas e Acessibilidade
 
-### Configurações Personalizadas
-1. **Abra as configurações** clicando em "⚙️ Configurações Avançadas"
-2. **Configure conforme suas necessidades**:
-   - Velocidade e tom da voz
-   - Comportamento automático
-   - Tema visual
-   - Idioma das explicações
-
-## 🎨 Temas e Acessibilidade
-
-A extensão oferece múltiplos temas para diferentes necessidades:
-
-- **Automático**: Segue o tema do sistema
-- **Claro**: Interface clara e limpa
-- **Escuro**: Reduz o cansaço visual
-- **Alto Contraste**: Máxima legibilidade
+<div align="center">
+<table>
+  <tr>
+    <td align="center"><b>Automático</b><br>Segue o tema do sistema</td>
+    <td align="center"><b>Claro</b><br>Interface clara e limpa</td>
+    <td align="center"><b>Escuro</b><br>Reduz o cansaço visual</td>
+    <td align="center"><b>Alto Contraste</b><br>Máxima legibilidade</td>
+  </tr>
+</table>
+</div>
 
 ## 🔧 Configurações Técnicas
 
-### Configurações de Voz
-- **Velocidade**: 0.5x a 2.0x
-- **Tom**: 0.5 a 2.0
-- **Volume**: 0% a 100%
-- **Vozes**: Todas as vozes disponíveis no sistema
+<details>
+<summary><b>🗣️ Configurações de Voz</b></summary>
+<ul>
+  <li><b>Velocidade</b>: 0.5x a 2.0x</li>
+  <li><b>Tom</b>: 0.5 a 2.0</li>
+  <li><b>Volume</b>: 0% a 100%</li>
+  <li><b>Vozes</b>: Todas as vozes disponíveis no sistema</li>
+</ul>
+</details>
 
-### Configurações de Comportamento
-- **Explicação Automática**: Explica automaticamente texto selecionado
-- **Leitura Automática**: Lê automaticamente texto selecionado
-- **Tooltip**: Mostra/oculta a barra de ferramentas
-- **Atalhos de Teclado**: Habilita/desabilita atalhos
+<details>
+<summary><b>⚙️ Configurações de Comportamento</b></summary>
+<ul>
+  <li><b>Explicação Automática</b>: Explica automaticamente texto selecionado</li>
+  <li><b>Leitura Automática</b>: Lê automaticamente texto selecionado</li>
+  <li><b>Tooltip</b>: Mostra/oculta a barra de ferramentas</li>
+  <li><b>Atalhos de Teclado</b>: Habilita/desabilita atalhos</li>
+</ul>
+</details>
 
-### Configurações Avançadas
-- **Tamanho Máximo de Texto**: Limite para explicações automáticas
-- **Idioma das Explicações**: pt-BR, en-US, es-ES, fr-FR
-- **Modo Debug**: Para desenvolvedores
+<details>
+<summary><b>🔬 Configurações Avançadas</b></summary>
+<ul>
+  <li><b>Tamanho Máximo de Texto</b>: Limite para explicações automáticas</li>
+  <li><b>Idioma das Explicações</b>: pt-BR, en-US, es-ES, fr-FR</li>
+  <li><b>Modo Debug</b>: Para desenvolvedores</li>
+</ul>
+</details>
 
 ## 🔒 Privacidade e Segurança
 
-- **Sua chave da API** é armazenada localmente no Chrome
-- **Textos selecionados** são enviados apenas para a API OpenAI
-- **Nenhum dado** é coletado ou armazenado pelos desenvolvedores
-- **Código aberto** para transparência total
+<table>
+  <tr>
+    <td>🔐</td>
+    <td><b>Sua chave da API</b> é armazenada localmente no Chrome</td>
+  </tr>
+  <tr>
+    <td>📤</td>
+    <td><b>Textos selecionados</b> são enviados apenas para a API OpenAI</td>
+  </tr>
+  <tr>
+    <td>🛡️</td>
+    <td><b>Nenhum dado</b> é coletado ou armazenado pelos desenvolvedores</td>
+  </tr>
+  <tr>
+    <td>👁️</td>
+    <td><b>Código aberto</b> para transparência total</td>
+  </tr>
+</table>
 
 ## 🐛 Solução de Problemas
 
-### A extensão não funciona
-1. Verifique se a chave da API está configurada corretamente
-2. Teste a conexão nas configurações
-3. Recarregue a página atual
-4. Verifique se a página não é uma página especial do Chrome
+<details>
+<summary><b>A extensão não funciona</b></summary>
+<ol>
+  <li>Verifique se a chave da API está configurada corretamente</li>
+  <li>Teste a conexão nas configurações</li>
+  <li>Recarregue a página atual</li>
+  <li>Verifique se a página não é uma página especial do Chrome</li>
+</ol>
+</details>
 
-### A voz não funciona
-1. Verifique se o volume está ligado
-2. Teste diferentes vozes nas configurações
-3. Verifique as permissões do navegador para áudio
+<details>
+<summary><b>A voz não funciona</b></summary>
+<ol>
+  <li>Verifique se o volume está ligado</li>
+  <li>Teste diferentes vozes nas configurações</li>
+  <li>Verifique as permissões do navegador para áudio</li>
+</ol>
+</details>
 
-### As explicações não aparecem
-1. Verifique sua conexão com a internet
-2. Teste a chave da API nas configurações
-3. Verifique se você tem créditos na conta OpenAI
+<details>
+<summary><b>As explicações não aparecem</b></summary>
+<ol>
+  <li>Verifique sua conexão com a internet</li>
+  <li>Teste a chave da API nas configurações</li>
+  <li>Verifique se você tem créditos na conta OpenAI</li>
+</ol>
+</details>
 
 ## 🤝 Contribuindo
 
@@ -165,4 +252,6 @@ Se você encontrar problemas ou tiver sugestões:
 
 ---
 
-**Feito com ❤️ para tornar a web mais acessível para todos.**
+<div align="center">
+  <p><b>Feito com ❤️ para tornar a web mais acessível para todos.</b></p>
+</div>
