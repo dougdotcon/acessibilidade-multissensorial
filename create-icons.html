@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Ícones - Acessibilidade</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .icon-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        .icon-item {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .icon-item h3 {
+            margin: 10px 0 5px 0;
+            color: #333;
+        }
+        .icon-item p {
+            margin: 0;
+            color: #666;
+            font-size: 12px;
+        }
+        button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 5px;
+        }
+        button:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎨 Gerador de Ícones para Extensão de Acessibilidade</h1>
+    <p>Clique nos botões abaixo para baixar os ícones nos tamanhos necessários.</p>
+    
+    <div class="icon-container">
+        <div class="icon-item">
+            <svg width="128" height="128" viewBox="0 0 128 128" id="icon-svg">
+                <!-- Fundo circular -->
+                <circle cx="64" cy="64" r="60" fill="#3498db" stroke="#2980b9" stroke-width="4"/>
+                
+                <!-- Símbolo de acessibilidade -->
+                <g fill="white">
+                    <!-- Pessoa -->
+                    <circle cx="64" cy="45" r="8"/>
+                    <path d="M64 55 L64 85 M55 65 L73 65 M58 85 L58 95 M70 85 L70 95" 
+                          stroke="white" stroke-width="4" stroke-linecap="round"/>
+                    
+                    <!-- Ondas sonoras -->
+                    <path d="M85 55 Q90 60 85 65" stroke="white" stroke-width="3" 
+                          fill="none" stroke-linecap="round"/>
+                    <path d="M90 50 Q98 60 90 70" stroke="white" stroke-width="3" 
+                          fill="none" stroke-linecap="round"/>
+                    <path d="M95 45 Q106 60 95 75" stroke="white" stroke-width="3" 
+                          fill="none" stroke-linecap="round"/>
+                    
+                    <!-- Texto/livro -->
+                    <rect x="35" y="50" width="15" height="20" rx="2" fill="white"/>
+                    <line x1="38" y1="55" x2="47" y2="55" stroke="#3498db" stroke-width="1"/>
+                    <line x1="38" y1="58" x2="47" y2="58" stroke="#3498db" stroke-width="1"/>
+                    <line x1="38" y1="61" x2="45" y2="61" stroke="#3498db" stroke-width="1"/>
+                </g>
+            </svg>
+            <h3>Ícone Principal</h3>
+            <p>128x128 pixels</p>
+            <button onclick="downloadIcon(128)">Baixar 128x128</button>
+            <button onclick="downloadIcon(48)">Baixar 48x48</button>
+            <button onclick="downloadIcon(32)">Baixar 32x32</button>
+            <button onclick="downloadIcon(16)">Baixar 16x16</button>
+        </div>
+    </div>
+    
+    <div style="margin-top: 30px; padding: 20px; background: white; border-radius: 8px;">
+        <h2>📋 Instruções</h2>
+        <ol>
+            <li>Clique nos botões acima para baixar os ícones em diferentes tamanhos</li>
+            <li>Salve os arquivos na pasta <code>icons/</code> da extensão com os nomes:
+                <ul>
+                    <li><code>icon16.png</code></li>
+                    <li><code>icon32.png</code></li>
+                    <li><code>icon48.png</code></li>
+                    <li><code>icon128.png</code></li>
+                </ul>
+            </li>
+            <li>Os ícones já estão configurados no <code>manifest.json</code></li>
+        </ol>
+        
+        <h3>🎨 Design do Ícone</h3>
+        <ul>
+            <li><strong>Círculo azul</strong>: Representa confiabilidade e acessibilidade</li>
+            <li><strong>Figura humana</strong>: Representa o usuário</li>
+            <li><strong>Ondas sonoras</strong>: Representa a funcionalidade de áudio/voz</li>
+            <li><strong>Livro/texto</strong>: Representa a funcionalidade de leitura e explicação</li>
+        </ul>
+    </div>
+
+    <script>
+        function downloadIcon(size) {
+            // Criar um canvas para renderizar o SVG
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = size;
+            canvas.height = size;
+            
+            // Obter o SVG
+            const svg = document.getElementById('icon-svg');
+            const svgData = new XMLSerializer().serializeToString(svg);
+            
+            // Criar uma imagem a partir do SVG
+            const img = new Image();
+            const svgBlob = new Blob([svgData], {type: 'image/svg+xml;charset=utf-8'});
+            const url = URL.createObjectURL(svgBlob);
+            
+            img.onload = function() {
+                // Desenhar no canvas com o tamanho desejado
+                ctx.drawImage(img, 0, 0, size, size);
+                
+                // Converter para PNG e baixar
+                canvas.toBlob(function(blob) {
+                    const link = document.createElement('a');
+                    link.download = `icon${size}.png`;
+                    link.href = URL.createObjectURL(blob);
+                    link.click();
+                    
+                    // Limpar URLs
+                    URL.revokeObjectURL(url);
+                    URL.revokeObjectURL(link.href);
+                }, 'image/png');
+            };
+            
+            img.src = url;
+        }
+        
+        // Função para criar ícones alternativos
+        function createAlternativeIcon() {
+            const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+            svg.setAttribute("width", "128");
+            svg.setAttribute("height", "128");
+            svg.setAttribute("viewBox", "0 0 128 128");
+            
+            // Fundo gradiente
+            const defs = document.createElementNS("http://www.w3.org/2000/svg", "defs");
+            const gradient = document.createElementNS("http://www.w3.org/2000/svg", "linearGradient");
+            gradient.setAttribute("id", "grad1");
+            gradient.setAttribute("x1", "0%");
+            gradient.setAttribute("y1", "0%");
+            gradient.setAttribute("x2", "100%");
+            gradient.setAttribute("y2", "100%");
+            
+            const stop1 = document.createElementNS("http://www.w3.org/2000/svg", "stop");
+            stop1.setAttribute("offset", "0%");
+            stop1.setAttribute("stop-color", "#667eea");
+            
+            const stop2 = document.createElementNS("http://www.w3.org/2000/svg", "stop");
+            stop2.setAttribute("offset", "100%");
+            stop2.setAttribute("stop-color", "#764ba2");
+            
+            gradient.appendChild(stop1);
+            gradient.appendChild(stop2);
+            defs.appendChild(gradient);
+            svg.appendChild(defs);
+            
+            // Círculo de fundo
+            const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+            circle.setAttribute("cx", "64");
+            circle.setAttribute("cy", "64");
+            circle.setAttribute("r", "60");
+            circle.setAttribute("fill", "url(#grad1)");
+            svg.appendChild(circle);
+            
+            return svg;
+        }
+    </script>
+</body>
+</html>

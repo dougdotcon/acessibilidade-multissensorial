@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configurações - Acessibilidade Multissensorial</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="options-container">
+    <header class="options-header">
+      <h1>🔊 Configurações de Acessibilidade</h1>
+      <p>Configure sua experiência multissensorial</p>
+    </header>
+    
+    <main class="options-content">
+      <form id="options-form">
+        
+        <!-- Configuração da API -->
+        <section class="config-section">
+          <h2>🔑 Configuração da API</h2>
+          <div class="form-group">
+            <label for="api-key">Chave da API OpenAI:</label>
+            <div class="input-group">
+              <input type="password" id="api-key" placeholder="sk-..." required>
+              <button type="button" id="toggle-api-key" class="toggle-btn">👁️</button>
+            </div>
+            <small class="help-text">
+              Sua chave da API OpenAI para usar o GPT-4o mini. 
+              <a href="https://platform.openai.com/api-keys" target="_blank">Obter chave</a>
+            </small>
+          </div>
+          
+          <div class="form-group">
+            <button type="button" id="test-api" class="test-btn">
+              🧪 Testar Conexão
+            </button>
+            <span id="api-status" class="status-indicator"></span>
+          </div>
+        </section>
+        
+        <!-- Configurações de Voz -->
+        <section class="config-section">
+          <h2>🎙️ Configurações de Voz</h2>
+          
+          <div class="form-group">
+            <label for="voice-select">Voz Preferida:</label>
+            <select id="voice-select">
+              <option value="default">Voz Padrão do Sistema</option>
+            </select>
+            <button type="button" id="test-voice" class="test-btn">🔊 Testar Voz</button>
+          </div>
+          
+          <div class="form-group">
+            <label for="voice-rate-config">Velocidade da Fala:</label>
+            <div class="range-group">
+              <input type="range" id="voice-rate-config" min="0.5" max="2" step="0.1" value="1">
+              <span id="rate-display">1.0x</span>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="voice-pitch-config">Tom da Voz:</label>
+            <div class="range-group">
+              <input type="range" id="voice-pitch-config" min="0.5" max="2" step="0.1" value="1">
+              <span id="pitch-display">1.0</span>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="voice-volume-config">Volume:</label>
+            <div class="range-group">
+              <input type="range" id="voice-volume-config" min="0" max="1" step="0.1" value="1">
+              <span id="volume-display">100%</span>
+            </div>
+          </div>
+        </section>
+        
+        <!-- Configurações de Comportamento -->
+        <section class="config-section">
+          <h2>⚙️ Comportamento</h2>
+          
+          <div class="form-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="auto-explain-config">
+              <span class="checkmark"></span>
+              <div class="checkbox-content">
+                <strong>Explicação Automática</strong>
+                <small>Explicar automaticamente texto selecionado</small>
+              </div>
+            </label>
+          </div>
+          
+          <div class="form-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="auto-read-config">
+              <span class="checkmark"></span>
+              <div class="checkbox-content">
+                <strong>Leitura Automática</strong>
+                <small>Ler automaticamente texto selecionado</small>
+              </div>
+            </label>
+          </div>
+          
+          <div class="form-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="show-tooltip-config">
+              <span class="checkmark"></span>
+              <div class="checkbox-content">
+                <strong>Mostrar Tooltip</strong>
+                <small>Exibir barra de ferramentas ao selecionar texto</small>
+              </div>
+            </label>
+          </div>
+          
+          <div class="form-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="keyboard-shortcuts-config">
+              <span class="checkmark"></span>
+              <div class="checkbox-content">
+                <strong>Atalhos de Teclado</strong>
+                <small>Habilitar atalhos de teclado para acessibilidade</small>
+              </div>
+            </label>
+          </div>
+        </section>
+        
+        <!-- Configurações de Aparência -->
+        <section class="config-section">
+          <h2>🎨 Aparência</h2>
+          
+          <div class="form-group">
+            <label for="font-size-config">Tamanho de Fonte Padrão:</label>
+            <div class="range-group">
+              <input type="range" id="font-size-config" min="12" max="24" step="1" value="16">
+              <span id="font-size-display">16px</span>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="theme-select">Tema:</label>
+            <select id="theme-select">
+              <option value="auto">Automático (Sistema)</option>
+              <option value="light">Claro</option>
+              <option value="dark">Escuro</option>
+              <option value="high-contrast">Alto Contraste</option>
+            </select>
+          </div>
+        </section>
+        
+        <!-- Configurações Avançadas -->
+        <section class="config-section">
+          <h2>🔧 Avançado</h2>
+          
+          <div class="form-group">
+            <label for="max-text-length">Tamanho Máximo de Texto (caracteres):</label>
+            <input type="number" id="max-text-length" min="100" max="5000" value="2000">
+            <small class="help-text">Limite de caracteres para explicação automática</small>
+          </div>
+          
+          <div class="form-group">
+            <label for="explanation-language">Idioma das Explicações:</label>
+            <select id="explanation-language">
+              <option value="pt-BR">Português (Brasil)</option>
+              <option value="en-US">English (US)</option>
+              <option value="es-ES">Español</option>
+              <option value="fr-FR">Français</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="debug-mode-config">
+              <span class="checkmark"></span>
+              <div class="checkbox-content">
+                <strong>Modo Debug</strong>
+                <small>Mostrar informações de debug no console</small>
+              </div>
+            </label>
+          </div>
+        </section>
+        
+      </form>
+    </main>
+    
+    <footer class="options-footer">
+      <div class="footer-actions">
+        <button type="button" id="reset-settings" class="secondary-btn">
+          🔄 Restaurar Padrões
+        </button>
+        <button type="button" id="export-settings" class="secondary-btn">
+          📤 Exportar Configurações
+        </button>
+        <button type="button" id="import-settings" class="secondary-btn">
+          📥 Importar Configurações
+        </button>
+        <input type="file" id="import-file" accept=".json" style="display: none;">
+      </div>
+      
+      <div class="save-actions">
+        <button type="button" id="save-settings" class="primary-btn">
+          💾 Salvar Configurações
+        </button>
+      </div>
+      
+      <div class="status-message" id="status-message"></div>
+    </footer>
+  </div>
+  
+  <script src="options.js"></script>
+</body>
+</html>

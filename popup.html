@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acessibilidade Multissensorial</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <header class="popup-header">
+      <h1>🔊 Acessibilidade</h1>
+      <p>Assistente multissensorial</p>
+    </header>
+    
+    <main class="popup-content">
+      <section class="status-section">
+        <div class="status-indicator">
+          <span class="status-dot" id="status-dot"></span>
+          <span class="status-text" id="status-text">Carregando...</span>
+        </div>
+      </section>
+      
+      <section class="quick-actions">
+        <h3>Ações Rápidas</h3>
+        
+        <div class="action-group">
+          <button class="action-btn primary" id="explain-page">
+            📖 Explicar Página
+          </button>
+          <button class="action-btn secondary" id="read-page">
+            🔊 Ler Página
+          </button>
+        </div>
+        
+        <div class="action-group">
+          <button class="action-btn" id="increase-font">
+            🔍+ Aumentar Fonte
+          </button>
+          <button class="action-btn" id="decrease-font">
+            🔍- Diminuir Fonte
+          </button>
+        </div>
+        
+        <div class="action-group">
+          <button class="action-btn danger" id="stop-reading">
+            ⏹️ Parar Leitura
+          </button>
+        </div>
+      </section>
+      
+      <section class="controls-section">
+        <h3>Controles de Voz</h3>
+        
+        <div class="control-group">
+          <label for="voice-rate">Velocidade:</label>
+          <input type="range" id="voice-rate" min="0.5" max="2" step="0.1" value="1">
+          <span id="rate-value">1.0x</span>
+        </div>
+        
+        <div class="control-group">
+          <label for="voice-pitch">Tom:</label>
+          <input type="range" id="voice-pitch" min="0.5" max="2" step="0.1" value="1">
+          <span id="pitch-value">1.0</span>
+        </div>
+        
+        <div class="control-group">
+          <label for="voice-volume">Volume:</label>
+          <input type="range" id="voice-volume" min="0" max="1" step="0.1" value="1">
+          <span id="volume-value">100%</span>
+        </div>
+      </section>
+      
+      <section class="settings-section">
+        <h3>Configurações</h3>
+        
+        <div class="setting-item">
+          <label class="checkbox-label">
+            <input type="checkbox" id="auto-explain">
+            <span class="checkmark"></span>
+            Explicar automaticamente
+          </label>
+        </div>
+        
+        <div class="setting-item">
+          <label class="checkbox-label">
+            <input type="checkbox" id="auto-read">
+            <span class="checkmark"></span>
+            Ler automaticamente
+          </label>
+        </div>
+      </section>
+      
+      <section class="shortcuts-section">
+        <h3>Atalhos de Teclado</h3>
+        <div class="shortcuts-list">
+          <div class="shortcut-item">
+            <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>E</kbd>
+            <span>Explicar seleção</span>
+          </div>
+          <div class="shortcut-item">
+            <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>R</kbd>
+            <span>Ler seleção</span>
+          </div>
+          <div class="shortcut-item">
+            <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>S</kbd>
+            <span>Parar leitura</span>
+          </div>
+          <div class="shortcut-item">
+            <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>+</kbd>
+            <span>Aumentar fonte</span>
+          </div>
+          <div class="shortcut-item">
+            <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>-</kbd>
+            <span>Diminuir fonte</span>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    <footer class="popup-footer">
+      <button class="footer-btn" id="open-options">
+        ⚙️ Configurações Avançadas
+      </button>
+      <div class="version-info">
+        v1.0.0
+      </div>
+    </footer>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

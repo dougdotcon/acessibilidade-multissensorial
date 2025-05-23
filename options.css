@@ -1,0 +1,446 @@
+/* Estilos para a página de opções */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #f5f7fa;
+  color: #2c3e50;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.options-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  min-height: 100vh;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.options-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 40px 30px;
+  text-align: center;
+}
+
+.options-header h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.options-header p {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* Content */
+.options-content {
+  padding: 30px;
+}
+
+.config-section {
+  margin-bottom: 40px;
+  padding: 24px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+}
+
+.config-section h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 8px;
+}
+
+/* Form Groups */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #34495e;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="number"],
+.form-group select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e1e8ed;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+/* Input Groups */
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.input-group input {
+  flex: 1;
+}
+
+.toggle-btn {
+  background: #6c757d;
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.toggle-btn:hover {
+  background: #5a6268;
+}
+
+/* Range Groups */
+.range-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.range-group input[type="range"] {
+  flex: 1;
+  height: 8px;
+  border-radius: 4px;
+  background: #e1e8ed;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.range-group input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #3498db;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.range-group input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #3498db;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.range-group span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #6c757d;
+  min-width: 60px;
+  text-align: center;
+  background: #f8f9fa;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid #e9ecef;
+}
+
+/* Checkboxes */
+.checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.checkbox-label:hover {
+  background: rgba(52, 152, 219, 0.05);
+}
+
+.checkbox-label input[type="checkbox"] {
+  display: none;
+}
+
+.checkmark {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #dee2e6;
+  border-radius: 4px;
+  position: relative;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkmark {
+  background: #3498db;
+  border-color: #3498db;
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkmark::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.checkbox-content {
+  flex: 1;
+}
+
+.checkbox-content strong {
+  display: block;
+  font-size: 14px;
+  color: #2c3e50;
+  margin-bottom: 2px;
+}
+
+.checkbox-content small {
+  font-size: 12px;
+  color: #6c757d;
+}
+
+/* Help Text */
+.help-text {
+  font-size: 12px;
+  color: #6c757d;
+  margin-top: 4px;
+  display: block;
+}
+
+.help-text a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.help-text a:hover {
+  text-decoration: underline;
+}
+
+/* Buttons */
+.test-btn,
+.secondary-btn,
+.primary-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.test-btn {
+  background: #17a2b8;
+  color: white;
+}
+
+.test-btn:hover {
+  background: #138496;
+}
+
+.secondary-btn {
+  background: #6c757d;
+  color: white;
+}
+
+.secondary-btn:hover {
+  background: #5a6268;
+}
+
+.primary-btn {
+  background: #28a745;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+}
+
+.primary-btn:hover {
+  background: #218838;
+}
+
+/* Status Indicator */
+.status-indicator {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-left: 8px;
+}
+
+.status-indicator.success {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.status-indicator.error {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.status-indicator.loading {
+  background: #d1ecf1;
+  color: #0c5460;
+  border: 1px solid #bee5eb;
+}
+
+/* Footer */
+.options-footer {
+  background: #f8f9fa;
+  padding: 30px;
+  border-top: 1px solid #e9ecef;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.save-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.status-message {
+  text-align: center;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  display: none;
+}
+
+.status-message.success {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.status-message.error {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .options-container {
+    margin: 0;
+    box-shadow: none;
+  }
+  
+  .options-header {
+    padding: 30px 20px;
+  }
+  
+  .options-content {
+    padding: 20px;
+  }
+  
+  .config-section {
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .options-footer {
+    padding: 20px;
+  }
+  
+  .footer-actions {
+    flex-direction: column;
+  }
+  
+  .secondary-btn,
+  .primary-btn {
+    width: 100%;
+    margin-right: 0;
+  }
+  
+  .range-group {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  
+  .range-group span {
+    text-align: center;
+  }
+}
+
+/* Acessibilidade */
+.form-group input:focus,
+.form-group select:focus,
+.test-btn:focus,
+.secondary-btn:focus,
+.primary-btn:focus,
+.checkbox-label:focus-within {
+  outline: 2px solid #3498db;
+  outline-offset: 2px;
+}
+
+/* Alto contraste */
+@media (prefers-contrast: high) {
+  .config-section {
+    border-width: 2px;
+  }
+  
+  .form-group input,
+  .form-group select {
+    border-width: 3px;
+  }
+  
+  .checkmark {
+    border-width: 3px;
+  }
+}
+
+/* Redução de movimento */
+@media (prefers-reduced-motion: reduce) {
+  .test-btn,
+  .secondary-btn,
+  .primary-btn,
+  .checkbox-label,
+  .checkmark,
+  .form-group input,
+  .form-group select {
+    transition: none;
+  }
+}

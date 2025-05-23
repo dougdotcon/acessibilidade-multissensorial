@@ -1,0 +1,392 @@
+/* Estilos para o popup da extensão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #f8f9fa;
+  color: #2c3e50;
+  line-height: 1.5;
+}
+
+.popup-container {
+  width: 380px;
+  max-height: 600px;
+  overflow-y: auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.popup-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 12px 12px 0 0;
+}
+
+.popup-header h1 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.popup-header p {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* Content */
+.popup-content {
+  padding: 20px;
+}
+
+.popup-content section {
+  margin-bottom: 24px;
+}
+
+.popup-content h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #2c3e50;
+  border-bottom: 2px solid #ecf0f1;
+  padding-bottom: 6px;
+}
+
+/* Status Section */
+.status-section {
+  background: #f8f9fa;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #27ae60;
+  animation: pulse 2s infinite;
+}
+
+.status-dot.inactive {
+  background: #e74c3c;
+  animation: none;
+}
+
+.status-text {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+/* Action Buttons */
+.action-group {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.action-btn {
+  flex: 1;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #f8f9fa;
+  color: #495057;
+  border: 1px solid #dee2e6;
+}
+
+.action-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.action-btn:active {
+  transform: translateY(0);
+}
+
+.action-btn.primary {
+  background: #3498db;
+  color: white;
+  border-color: #3498db;
+}
+
+.action-btn.primary:hover {
+  background: #2980b9;
+}
+
+.action-btn.secondary {
+  background: #27ae60;
+  color: white;
+  border-color: #27ae60;
+}
+
+.action-btn.secondary:hover {
+  background: #229954;
+}
+
+.action-btn.danger {
+  background: #e74c3c;
+  color: white;
+  border-color: #e74c3c;
+}
+
+.action-btn.danger:hover {
+  background: #c0392b;
+}
+
+/* Controls */
+.control-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.control-group label {
+  font-size: 14px;
+  font-weight: 500;
+  min-width: 80px;
+}
+
+.control-group input[type="range"] {
+  flex: 1;
+  height: 6px;
+  border-radius: 3px;
+  background: #dee2e6;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.control-group input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #3498db;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.control-group input[type="range"]::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #3498db;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.control-group span {
+  font-size: 12px;
+  font-weight: 600;
+  color: #6c757d;
+  min-width: 40px;
+  text-align: right;
+}
+
+/* Settings */
+.setting-item {
+  margin-bottom: 12px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+  gap: 12px;
+}
+
+.checkbox-label input[type="checkbox"] {
+  display: none;
+}
+
+.checkmark {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #dee2e6;
+  border-radius: 4px;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkmark {
+  background: #3498db;
+  border-color: #3498db;
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkmark::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Shortcuts */
+.shortcuts-list {
+  font-size: 12px;
+}
+
+.shortcut-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #f1f3f4;
+}
+
+.shortcut-item:last-child {
+  border-bottom: none;
+}
+
+.shortcut-item kbd {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 10px;
+  font-weight: 600;
+  color: #495057;
+}
+
+.shortcut-item span {
+  color: #6c757d;
+}
+
+/* Footer */
+.popup-footer {
+  padding: 16px 20px;
+  background: #f8f9fa;
+  border-top: 1px solid #e9ecef;
+  border-radius: 0 0 12px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-btn {
+  background: none;
+  border: none;
+  color: #6c757d;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.footer-btn:hover {
+  background: #e9ecef;
+  color: #495057;
+}
+
+.version-info {
+  font-size: 10px;
+  color: #adb5bd;
+  font-weight: 500;
+}
+
+/* Scrollbar */
+.popup-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.popup-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.popup-container::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.popup-container::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Acessibilidade */
+.action-btn:focus,
+.footer-btn:focus,
+.checkbox-label:focus-within {
+  outline: 2px solid #3498db;
+  outline-offset: 2px;
+}
+
+/* Responsividade */
+@media (max-width: 400px) {
+  .popup-container {
+    width: 100vw;
+    max-width: 380px;
+  }
+  
+  .action-group {
+    flex-direction: column;
+  }
+  
+  .control-group {
+    flex-wrap: wrap;
+  }
+  
+  .control-group label {
+    min-width: auto;
+    width: 100%;
+  }
+}
+
+/* Alto contraste */
+@media (prefers-contrast: high) {
+  .popup-container {
+    border: 2px solid #000;
+  }
+  
+  .action-btn {
+    border-width: 2px;
+  }
+  
+  .checkmark {
+    border-width: 3px;
+  }
+}
+
+/* Redução de movimento */
+@media (prefers-reduced-motion: reduce) {
+  .action-btn,
+  .footer-btn,
+  .checkmark,
+  .status-dot {
+    transition: none;
+    animation: none;
+  }
+  
+  .action-btn:hover {
+    transform: none;
+  }
+}

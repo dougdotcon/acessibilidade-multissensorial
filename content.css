@@ -1,0 +1,238 @@
+/* Estilos para o content script da extensão de acessibilidade */
+
+#accessibility-tooltip {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  line-height: 1.4 !important;
+}
+
+#accessibility-tooltip .tooltip-content {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#accessibility-tooltip button {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+#accessibility-tooltip button:hover {
+  background: #2980b9;
+  transform: translateY(-1px);
+}
+
+#accessibility-tooltip button:active {
+  transform: translateY(0);
+}
+
+#accessibility-tooltip #explain-btn {
+  background: #9b59b6;
+}
+
+#accessibility-tooltip #explain-btn:hover {
+  background: #8e44ad;
+}
+
+#accessibility-tooltip #read-btn {
+  background: #27ae60;
+}
+
+#accessibility-tooltip #read-btn:hover {
+  background: #229954;
+}
+
+#accessibility-tooltip #stop-btn {
+  background: #e74c3c;
+}
+
+#accessibility-tooltip #stop-btn:hover {
+  background: #c0392b;
+}
+
+#accessibility-tooltip #zoom-in-btn,
+#accessibility-tooltip #zoom-out-btn {
+  background: #f39c12;
+}
+
+#accessibility-tooltip #zoom-in-btn:hover,
+#accessibility-tooltip #zoom-out-btn:hover {
+  background: #e67e22;
+}
+
+/* Modal de explicação */
+.explanation-modal {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+.explanation-content {
+  font-family: inherit !important;
+}
+
+.explanation-content h3 {
+  margin: 0 0 16px 0;
+  color: #2c3e50;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.explanation-content .original-text,
+.explanation-content .explanation-text {
+  margin-bottom: 16px;
+  padding: 12px;
+  border-radius: 6px;
+  background: #f8f9fa;
+  border-left: 4px solid #3498db;
+}
+
+.explanation-content .original-text strong,
+.explanation-content .explanation-text strong {
+  color: #2c3e50;
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.explanation-content .original-text p,
+.explanation-content .explanation-text p {
+  margin: 0;
+  line-height: 1.6;
+  color: #34495e;
+}
+
+.explanation-content .original-text {
+  border-left-color: #9b59b6;
+}
+
+.explanation-content .explanation-text {
+  border-left-color: #27ae60;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #ecf0f1;
+}
+
+.modal-actions button {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.modal-actions button:hover {
+  background: #2980b9;
+  transform: translateY(-1px);
+}
+
+.modal-actions #read-explanation {
+  background: #27ae60;
+}
+
+.modal-actions #read-explanation:hover {
+  background: #229954;
+}
+
+.modal-actions #close-explanation {
+  background: #95a5a6;
+}
+
+.modal-actions #close-explanation:hover {
+  background: #7f8c8d;
+}
+
+/* Notificações */
+.accessibility-notification {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+/* Melhorias de acessibilidade */
+#accessibility-tooltip button:focus,
+.modal-actions button:focus {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  #accessibility-tooltip {
+    max-width: 280px !important;
+  }
+  
+  #accessibility-tooltip .tooltip-content {
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  #accessibility-tooltip button {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .explanation-content {
+    margin: 10px !important;
+    max-width: calc(100vw - 20px) !important;
+  }
+  
+  .modal-actions {
+    flex-direction: column;
+  }
+  
+  .modal-actions button {
+    width: 100%;
+  }
+}
+
+/* Alto contraste para acessibilidade */
+@media (prefers-contrast: high) {
+  #accessibility-tooltip {
+    background: #000 !important;
+    border: 2px solid #fff !important;
+  }
+  
+  #accessibility-tooltip button {
+    border: 1px solid #fff !important;
+  }
+  
+  .explanation-content {
+    border: 2px solid #000 !important;
+  }
+  
+  .explanation-content .original-text,
+  .explanation-content .explanation-text {
+    background: #f0f0f0 !important;
+    border-left-width: 6px !important;
+  }
+}
+
+/* Redução de movimento para acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+  #accessibility-tooltip button,
+  .modal-actions button {
+    transition: none !important;
+  }
+  
+  #accessibility-tooltip button:hover,
+  .modal-actions button:hover {
+    transform: none !important;
+  }
+}
