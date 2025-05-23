@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Teste - Extensão de Acessibilidade</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f8f9fa;
+            color: #2c3e50;
+        }
+        
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #3498db;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+        
+        .test-section {
+            margin: 30px 0;
+            padding: 20px;
+            border-left: 4px solid #3498db;
+            background: #f8f9fa;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .test-section h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .highlight {
+            background: #fff3cd;
+            padding: 2px 4px;
+            border-radius: 3px;
+            border: 1px solid #ffeaa7;
+        }
+        
+        .complex-text {
+            font-size: 14px;
+            text-align: justify;
+        }
+        
+        .simple-text {
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        
+        .instructions {
+            background: #e8f5e8;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #c3e6c3;
+            margin: 20px 0;
+        }
+        
+        .instructions h3 {
+            color: #27ae60;
+            margin-bottom: 10px;
+        }
+        
+        .keyboard-shortcuts {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        
+        .keyboard-shortcuts kbd {
+            background: #2196f3;
+            color: white;
+            padding: 3px 6px;
+            border-radius: 3px;
+            font-size: 12px;
+            margin: 0 2px;
+        }
+        
+        .test-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        
+        .test-btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+        
+        .test-btn:hover {
+            background: #2980b9;
+        }
+        
+        .test-btn.secondary {
+            background: #95a5a6;
+        }
+        
+        .test-btn.secondary:hover {
+            background: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔊 Teste da Extensão de Acessibilidade</h1>
+        
+        <div class="instructions">
+            <h3>📋 Como testar a extensão:</h3>
+            <ol>
+                <li><strong>Selecione qualquer texto</strong> nesta página</li>
+                <li><strong>Use os atalhos de teclado</strong> ou clique na barra de ferramentas que aparece</li>
+                <li><strong>Teste diferentes funcionalidades</strong> usando os botões abaixo</li>
+                <li><strong>Verifique o popup</strong> clicando no ícone da extensão</li>
+            </ol>
+        </div>
+        
+        <div class="keyboard-shortcuts">
+            <strong>⌨️ Atalhos de Teclado:</strong><br>
+            <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>E</kbd> = Explicar texto selecionado<br>
+            <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>R</kbd> = Ler texto selecionado<br>
+            <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>S</kbd> = Parar leitura<br>
+            <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>+</kbd> = Aumentar fonte<br>
+            <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>-</kbd> = Diminuir fonte
+        </div>
+        
+        <div class="test-section">
+            <h2>📖 Texto Simples para Teste</h2>
+            <p class="simple-text">
+                Este é um <span class="highlight">texto simples</span> para testar a funcionalidade básica da extensão. 
+                Selecione esta frase e teste a explicação e leitura em voz alta. 
+                A extensão deve conseguir processar este conteúdo facilmente.
+            </p>
+        </div>
+        
+        <div class="test-section">
+            <h2>🧠 Texto Complexo para Teste</h2>
+            <p class="complex-text">
+                A <span class="highlight">inteligência artificial</span> representa um paradigma revolucionário na computação contemporânea, 
+                caracterizando-se pela capacidade de sistemas computacionais simularem processos cognitivos humanos através de 
+                algoritmos sofisticados de aprendizado de máquina. Esta tecnologia emergente utiliza redes neurais artificiais 
+                para processar grandes volumes de dados, identificar padrões complexos e realizar inferências preditivas com 
+                precisão crescente, transformando fundamentalmente diversos setores da sociedade moderna.
+            </p>
+        </div>
+        
+        <div class="test-section">
+            <h2>🌍 Texto em Contexto Técnico</h2>
+            <p>
+                O <span class="highlight">protocolo HTTPS</span> (HyperText Transfer Protocol Secure) é uma extensão do HTTP 
+                que utiliza criptografia TLS/SSL para estabelecer comunicações seguras entre navegadores e servidores web. 
+                Este protocolo garante a integridade, confidencialidade e autenticidade dos dados transmitidos, 
+                protegendo informações sensíveis contra interceptação e manipulação por terceiros maliciosos.
+            </p>
+        </div>
+        
+        <div class="test-section">
+            <h2>📚 Texto Educacional</h2>
+            <p>
+                A <span class="highlight">fotossíntese</span> é um processo biológico fundamental realizado por plantas, 
+                algas e algumas bactérias, no qual a energia luminosa é convertida em energia química. 
+                Durante este processo, o dióxido de carbono e a água são transformados em glicose e oxigênio, 
+                utilizando a clorofila como catalisador. Este mecanismo é essencial para a vida na Terra, 
+                pois produz o oxigênio que respiramos e forma a base da cadeia alimentar.
+            </p>
+        </div>
+        
+        <div class="test-buttons">
+            <button class="test-btn" onclick="testSelection()">
+                📝 Selecionar Texto Automaticamente
+            </button>
+            <button class="test-btn" onclick="testLongText()">
+                📄 Testar Texto Longo
+            </button>
+            <button class="test-btn secondary" onclick="clearSelection()">
+                🗑️ Limpar Seleção
+            </button>
+        </div>
+        
+        <div class="test-section">
+            <h2>🎯 Resultados dos Testes</h2>
+            <div id="test-results">
+                <p>Os resultados dos testes aparecerão aqui...</p>
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <h3>✅ Checklist de Funcionalidades:</h3>
+            <ul>
+                <li>☐ Tooltip aparece ao selecionar texto</li>
+                <li>☐ Explicação funciona com texto selecionado</li>
+                <li>☐ Leitura em voz alta funciona</li>
+                <li>☐ Atalhos de teclado respondem</li>
+                <li>☐ Ajuste de fonte funciona</li>
+                <li>☐ Popup da extensão abre corretamente</li>
+                <li>☐ Configurações podem ser acessadas</li>
+                <li>☐ API OpenAI está configurada</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script>
+        function testSelection() {
+            const text = "Este texto foi selecionado automaticamente para teste da extensão de acessibilidade.";
+            const range = document.createRange();
+            const textNode = document.createTextNode(text);
+            
+            // Adicionar o texto ao resultado
+            const resultsDiv = document.getElementById('test-results');
+            resultsDiv.innerHTML = `<p><strong>Texto selecionado:</strong> ${text}</p>`;
+            
+            // Simular seleção
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            
+            // Criar um span temporário para seleção
+            const span = document.createElement('span');
+            span.textContent = text;
+            span.style.background = '#fff3cd';
+            span.style.padding = '2px 4px';
+            span.style.borderRadius = '3px';
+            
+            resultsDiv.appendChild(span);
+            
+            // Selecionar o texto
+            range.selectNodeContents(span);
+            selection.addRange(range);
+            
+            // Simular evento de seleção
+            document.dispatchEvent(new Event('mouseup'));
+        }
+        
+        function testLongText() {
+            const longText = `
+                A acessibilidade digital é um conceito fundamental que visa garantir que pessoas com deficiências 
+                possam perceber, compreender, navegar e interagir com a web de forma eficaz. Isso inclui pessoas 
+                com deficiências visuais, auditivas, motoras e cognitivas. As tecnologias assistivas, como leitores 
+                de tela, software de reconhecimento de voz e dispositivos de entrada alternativos, desempenham um 
+                papel crucial na criação de uma experiência web inclusiva. O desenvolvimento de interfaces acessíveis 
+                não apenas beneficia pessoas com deficiências, mas também melhora a usabilidade geral para todos os usuários.
+            `;
+            
+            const resultsDiv = document.getElementById('test-results');
+            resultsDiv.innerHTML = `<p><strong>Texto longo para teste:</strong></p><p style="background: #f8f9fa; padding: 15px; border-radius: 6px;">${longText}</p>`;
+            
+            // Selecionar o texto longo
+            const selection = window.getSelection();
+            const range = document.createRange();
+            const textElement = resultsDiv.querySelector('p:last-child');
+            
+            range.selectNodeContents(textElement);
+            selection.removeAllRanges();
+            selection.addRange(range);
+            
+            // Simular evento de seleção
+            document.dispatchEvent(new Event('mouseup'));
+        }
+        
+        function clearSelection() {
+            window.getSelection().removeAllRanges();
+            document.getElementById('test-results').innerHTML = '<p>Seleção limpa. Os resultados dos testes aparecerão aqui...</p>';
+        }
+        
+        // Adicionar listeners para detectar quando a extensão está funcionando
+        document.addEventListener('DOMContentLoaded', function() {
+            // Verificar se a extensão foi carregada
+            setTimeout(() => {
+                const tooltip = document.getElementById('accessibility-tooltip');
+                if (tooltip) {
+                    console.log('✅ Extensão de acessibilidade detectada!');
+                } else {
+                    console.log('⚠️ Extensão de acessibilidade não detectada. Verifique se está instalada e ativa.');
+                }
+            }, 2000);
+        });
+        
+        // Log de eventos para debug
+        document.addEventListener('mouseup', function() {
+            const selection = window.getSelection().toString();
+            if (selection.length > 0) {
+                console.log('Texto selecionado:', selection.substring(0, 50) + '...');
+            }
+        });
+    </script>
+</body>
+</html>
